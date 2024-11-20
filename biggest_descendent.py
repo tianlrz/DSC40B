@@ -20,7 +20,6 @@ def biggest_descendent(graph, root, value):
         return max_value
     
     # Process all nodes starting from the root
-    # We'll use nodes attribute from the documentation
     for node in graph.nodes:
         if node not in result:
             dfs(node)
