@@ -1,3 +1,5 @@
+from dsc40graph import UndirectedGraph
+
 class _DisjointSetForestCore:
     def __init__(self):
         self._parent = []
@@ -79,7 +81,6 @@ def slc(graph, d, k):
         frozenset of k frozensets, each representing a cluster
     """
     edges = []
-    # Using edges attribute instead of iterating through nodes
     for edge in graph.edges:
         if edge[0] < edge[1]:  # Only add each edge once
             edges.append(edge)
